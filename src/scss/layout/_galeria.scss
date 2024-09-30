@@ -1,0 +1,82 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria {
+
+    &-imagenes {
+        @include m.grid(2, 2rem);
+
+        @include m.tablet {
+            @include m.grid(4, 2rem);
+        }
+
+        img {
+            width: 20rem;
+            height: auto;
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(v.$link-color, 0.5);
+    display: grid;
+    place-items: center;
+    animation: fadeIn ease-in 0.5s;
+
+    &.fade-out {
+        animation: fadeOut ease-in 0.5s;
+    }
+
+    picture { 
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 100%;
+        place-items: center;
+
+        @include m.tablet {
+            width: 50%;
+        }
+    
+        @include m.desktop {
+            width: 80%;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.btn-cerrar {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: none;
+    background-color: v.$primary-color;
+    color: v.$bg-color;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}

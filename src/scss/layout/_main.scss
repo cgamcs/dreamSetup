@@ -14,6 +14,14 @@
 
     .list { 
         padding: 0;
+
+        .list-content {
+            padding-bottom: 0.2rem;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
         
         .link-list { 
             color: v.$link-color;

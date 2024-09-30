@@ -72,12 +72,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4rem;
-    width: 4rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.5rem;
     border-radius: 50%;
     border: none;
     background-color: v.$primary-color;
     color: v.$bg-color;
     font-weight: 700;
     cursor: pointer;
+
+    @include m.tablet {
+        height: 4rem;
+        width: 4rem;
+    }
 }

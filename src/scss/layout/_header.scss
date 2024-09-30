@@ -1,0 +1,38 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    @include m.container-XL;
+
+    @include m.tablet {
+        @include m.container-XL;
+    }
+
+    @include m.desktop {
+        @include m.container;
+    }
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 10rem 0 5rem 0;
+
+    h1, p { margin: 0; }
+
+    img {
+        width: 12rem;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    @include m.tablet {
+        h1 { font-size: 4rem; }
+
+        p { font-size: 2rem; }
+
+        img {
+            width: 10rem;
+            height: auto;
+        }
+    }
+}

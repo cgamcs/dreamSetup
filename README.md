@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://img.icons8.com/?size=48&id=2TlXnKX7oZXI&format=png&color=000000" alt="shopping-cart-emoji">
+<img src="https://img.icons8.com/?size=55&id=2TlXnKX7oZXI&format=png&color=000000" alt="shopping-cart-emoji">
 </p>
 <h1 align="center">Cesar's Dream SetUp</h1>
 <p align="center">A primera vista, <a href="https://listsetup.vercel.app/" target="_blank">Cesar's Dream SetUp</a> es una página para optimizar la experiencia del usuario con la vista más manera clara y sencilla</p>

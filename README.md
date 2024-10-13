@@ -8,9 +8,9 @@
 
 ## 🎨 Color code
 
-| Color           | Hex                                                                |
-| ----------------|--------------------------------------------------------------------|
-| Azul Oscuro     | ![#1E6079](https://via.placeholder.com/10/1E6079?text=+) `#1E6079` |
-| Gris            | ![#3a3a3a](https://via.placeholder.com/10/3a3a3a?text=+) `#3a3a3a` |
-| Blanco          | ![#ffffff](https://via.placeholder.com/10/ffffff?text=+) `#ffffff` |
-| Negro           | ![#000000](https://via.placeholder.com/10/000000?text=+) `#000000` |
+| Color           | Hex                                                                      |
+| ----------------|--------------------------------------------------------------------------|
+| Gris Oscuro     | ![#ffffff59](https://via.placeholder.com/10/ffffff59?text=+) `#ffffff59` |
+| Gris            | ![#a0a0a0](https://via.placeholder.com/10/a0a0a0?text=+) `#a0a0a0`       |
+| Blanco          | ![#ffffff](https://via.placeholder.com/10/ffffff?text=+) `#ffffff`       |
+| Negro           | ![#000000](https://via.placeholder.com/10/000000?text=+) `#000000`       |

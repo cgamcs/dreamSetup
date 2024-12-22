@@ -23,6 +23,7 @@
     "sharp": "^0.33.4"
   },
   "dependencies": {
+    "listProducts": "file:",
     "remixicon": "^4.3.0"
   }
 }

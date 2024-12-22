@@ -4,6 +4,28 @@ document.addEventListener('DOMContentLoaded', function() {
     crearGaleria();
 })
 
+const main = document.querySelector('.main');
+const tarjeta = document.querySelector('.tarjeta');
+const desk = document.querySelector('.desk');
+tarjeta.addEventListener('click', onClickTarjeta);
+
+function onClickTarjeta(e) {
+    console.log(e.target);
+    const id = e.target.getAttribute('id');
+
+    if (id === '1') {
+        console.log('presiono desk')
+    }
+    return;
+    limpiarContenido();
+}
+
+function limpiarContenido() {
+    while ( main.firstChild ) {
+        main.removeChild(main.firstChild);
+    }
+}
+
 function about() {
     // Seleccionar las secciones que quieres animar
     const sections = document.querySelectorAll('.projects, .about');

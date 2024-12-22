@@ -34,7 +34,7 @@ html {
     background-color: #555;
 }
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Open Sans", serif;
     font-optical-sizing: auto;
     font-style: normal;
     color: v.$primary-color;
@@ -53,7 +53,7 @@ p {
 a {
     text-decoration: none;
 }
-h1, h2 {
+h2 {
     font-family: v.$fuente_titulo;
     font-optical-sizing: auto;
 }
@@ -63,7 +63,6 @@ h1 { font-size: 2rem; text-transform: uppercase; margin: 0 0 5rem 0; }
 h2 { font-size: 3rem; color: v.$primary-color; }
 
 img {
-    max-width: 100%;
     width: 100%;
     height: auto;
     display: block;

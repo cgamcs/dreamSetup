@@ -70,9 +70,10 @@ img {
 body > section {
     padding-bottom: 10rem;
 }
-li {
-    list-style: none;
-}
+li { list-style: none; }
+
+.txt-align { text-align: center; }
+
 .fade-in {
     opacity: 0;
     transform: translateY(30px);

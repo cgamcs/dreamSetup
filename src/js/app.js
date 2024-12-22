@@ -10,14 +10,13 @@ const desk = document.querySelector('.desk');
 tarjeta.addEventListener('click', onClickTarjeta);
 
 function onClickTarjeta(e) {
-    console.log(e.target);
-    const id = e.target.getAttribute('id');
-
-    if (id === '1') {
-        console.log('presiono desk')
-    }
-    return;
     limpiarContenido();
+
+    const tarjetaElement = e.target.closest('.tarjeta');
+
+    if (tarjetaElement.getAttribute('id') === '1') {
+        desk.style.display = 'block';
+    }
 }
 
 function limpiarContenido() {

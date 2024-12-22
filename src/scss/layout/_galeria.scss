@@ -6,14 +6,20 @@
     &-imagenes {
         @include m.grid(2, 2rem);
 
-        @include m.tablet {
-            @include m.grid(4, 2rem);
-        }
-
         img {
-            width: 20rem;
+            width: 15rem;
             height: auto;
             border-radius: 2rem;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px 0px;
+        }
+
+        @include m.tablet {
+            @include m.grid(4, 2rem);
+
+            img {
+                width: 20rem;
+            }
         }
     }
 }

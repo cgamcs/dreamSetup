@@ -1,13 +1,54 @@
-document.addEventListener('DOMContentLoaded', function() {
-    about();
-    buttonActive();
-    crearGaleria();
-})
-
+// Variables
 const main = document.querySelector('.main');
 const tarjeta = document.querySelector('.tarjeta');
 const desk = document.querySelector('.desk');
 tarjeta.addEventListener('click', onClickTarjeta);
+
+// EventListeners
+cargarEventListeners()
+function cargarEventListeners() {
+    document.addEventListener('DOMContentLoaded', function() {
+        about();
+        buttonActive();
+        mostrarElementos(elementos)
+    })
+}
+
+// Funciones
+function mostrarElementos(elementos) {
+    console.log(elementos)
+
+    elementos.forEach(elemento => {
+        const section = document.createElement('SECTION')
+        const lista = document.createElement('UL')
+        const { titulo, seccion, id, link, avif, webp, jpg, desc } = elemento;
+
+        section.innerText = '${titulo}'
+        lista.classList.add('list')
+        lista.innerHTML = `
+            <li class="list-content"><a class="link-list" href="https://acortar.link/lP69KF" target="_blank">
+                <div class="tarjeta" id="1">
+                    <div class="tarjeta-img">
+                        <picture>
+                            <source srcset="build/img/gallery/full/logitechkeys.avif" type="image/avif">
+                            <source srcset="build/img/gallery/full/logitechkeys.webp" type="image/webp">
+                            <img width="300" height="200" loading="lazy" src="build/img/gallery/full/logitechkeys.jpg" alt="">
+                        </picture>
+                    </div>
+        
+                    <div class="tarjeta-info">
+                        <h2>Logitech MX Keys</h2>
+        
+                        <p>Teclado inalámbrico, bajo Perfil, preciso y silencioso, Teclas programables, retroiluminado, Bluetooth, USB C Recargable, para Windows PC, Linux, Chrome, Mac-Negro</p>
+                    </div>
+                </div>
+            </a></li>
+        `
+
+        // Inserta en el HTML
+        document.getElementById('resultado').appendChild(camisaHTML);
+    })
+}
 
 function onClickTarjeta(e) {
     limpiarContenido();
@@ -16,12 +57,6 @@ function onClickTarjeta(e) {
 
     if (tarjetaElement.getAttribute('id') === '1') {
         desk.style.display = 'block';
-    }
-}
-
-function limpiarContenido() {
-    while ( main.firstChild ) {
-        main.removeChild(main.firstChild);
     }
 }
 
@@ -105,5 +140,10 @@ function buttonActive() {
             spanClick.style.height = buttonHeight + 'px';
         });
     });
-    
+}
+
+function limpiarContenido() {
+    while ( main.firstChild ) {
+        main.removeChild(main.firstChild);
+    }
 }

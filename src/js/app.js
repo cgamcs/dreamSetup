@@ -20,33 +20,43 @@ function mostrarElementos(elementos) {
 
     elementos.forEach(elemento => {
         const section = document.createElement('SECTION')
-        const lista = document.createElement('UL')
-        const { titulo, seccion, id, link, avif, webp, jpg, desc } = elemento;
+        section.innerHTML = `<h2 class="txt-align">${elemento.titulo}</h2>`;
 
-        section.innerText = '${titulo}'
-        lista.classList.add('list')
-        lista.innerHTML = `
-            <li class="list-content"><a class="link-list" href="https://acortar.link/lP69KF" target="_blank">
-                <div class="tarjeta" id="1">
-                    <div class="tarjeta-img">
-                        <picture>
-                            <source srcset="build/img/gallery/full/logitechkeys.avif" type="image/avif">
-                            <source srcset="build/img/gallery/full/logitechkeys.webp" type="image/webp">
-                            <img width="300" height="200" loading="lazy" src="build/img/gallery/full/logitechkeys.jpg" alt="">
-                        </picture>
+        const list = document.createElement('UL')
+        list.classList.add('list')
+
+        elemento.seccion.forEach(producto => {
+            const { link, nombre, avif, webp, jpg, desc } = producto;
+
+            const listItem = document.createElement('LI');
+            listItem.classList.add('list-content');
+
+            listItem.innerHTML = `
+                <li class="list-content"><a class="link-list" href="${link}" target="_blank">
+                    <div class="tarjeta" id="1">
+                        <div class="tarjeta-img">
+                            <picture>
+                                <source srcset="${avif}" type="image/avif">
+                                <source srcset="${webp}" type="image/webp">
+                                <img width="300" height="200" loading="lazy" src="${jpg}" alt="Imagen de elemento">
+                            </picture>
+                        </div>
+            
+                        <div class="tarjeta-info">
+                            <h2>${nombre}</h2>
+            
+                            <p>${desc}</p>
+                        </div>
                     </div>
-        
-                    <div class="tarjeta-info">
-                        <h2>Logitech MX Keys</h2>
-        
-                        <p>Teclado inalámbrico, bajo Perfil, preciso y silencioso, Teclas programables, retroiluminado, Bluetooth, USB C Recargable, para Windows PC, Linux, Chrome, Mac-Negro</p>
-                    </div>
-                </div>
-            </a></li>
-        `
+                </a></li>
+            `
+
+            list.appendChild(listItem)
+        })
 
         // Inserta en el HTML
-        document.getElementById('resultado').appendChild(camisaHTML);
+        section.appendChild(list)
+        desk.appendChild(section)
     })
 }
 

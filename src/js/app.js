@@ -1,8 +1,8 @@
 // Variables
 const main = document.querySelector('.main');
 const tarjeta = document.querySelector('.tarjeta');
-const desk = document.querySelector('.desk');
-tarjeta.addEventListener('click', onClickTarjeta);
+const desk = document.querySelector('#desk');
+const pc = document.querySelector('#pc');
 
 // EventListeners
 cargarEventListeners()
@@ -12,6 +12,8 @@ function cargarEventListeners() {
         buttonActive();
         mostrarElementos(elementos)
     })
+
+    tarjeta.addEventListener('click', onClickTarjeta);
 }
 
 // Funciones
@@ -66,7 +68,11 @@ function onClickTarjeta(e) {
     const tarjetaElement = e.target.closest('.tarjeta');
 
     if (tarjetaElement.getAttribute('id') === '1') {
-        desk.style.display = 'block';
+        desk.classList.add('desk')
+        desk.classList.remove('hidden')
+    } else {
+        pc.classList.add('pc')
+        pc.classList.remove('hidden')
     }
 }
 

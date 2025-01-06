@@ -11,9 +11,10 @@ function cargarEventListeners() {
         about();
         buttonActive();
         mostrarElementos(elementos)
+        mostrarComponentes(configuraciones)
     })
 
-    tarjeta.addEventListener('click', onClickTarjeta);
+    main.addEventListener('click', onClickTarjeta);
 }
 
 // Funciones
@@ -35,7 +36,7 @@ function mostrarElementos(elementos) {
 
             listItem.innerHTML = `
                 <li class="list-content"><a class="link-list" href="${link}" target="_blank">
-                    <div class="tarjeta" id="1">
+                    <div class="tarjeta">
                         <div class="tarjeta-img">
                             <picture>
                                 <source srcset="${avif}" type="image/avif">
@@ -62,12 +63,55 @@ function mostrarElementos(elementos) {
     })
 }
 
+function mostrarComponentes(configuraciones) {
+    console.log(configuraciones)
+
+    configuraciones.forEach(configuracion => {
+        const section = document.createElement('SECTION')
+        section.innerHTML = `<h2 class="txt-align">${configuracion.titulo}</h2>`;
+
+        const list = document.createElement('UL')
+        list.classList.add('list')
+
+        configuracion.componentes.forEach(componente => {
+            const { link, nombre, avif, webp, jpg } = componente;
+
+            const listItem = document.createElement('LI');
+            listItem.classList.add('list-content');
+
+            listItem.innerHTML = `
+                <li class="list-content"><a class="link-list" href="${link}" target="_blank">
+                    <div class="tarjeta">
+                        <div class="tarjeta-img">
+                            <picture>
+                                <source srcset="${avif}" type="image/avif">
+                                <source srcset="${webp}" type="image/webp">
+                                <img width="300" height="200" loading="lazy" src="${jpg}" alt="Imagen de elemento">
+                            </picture>
+                        </div>
+            
+                        <div class="tarjeta-info">
+                            <h2>${nombre}</h2>
+                        </div>
+                    </div>
+                </a></li>
+            `
+
+            list.appendChild(listItem)
+        })
+
+        // Inserta en el HTML
+        section.appendChild(list)
+        pc.appendChild(section)
+    })
+}
+
 function onClickTarjeta(e) {
     limpiarContenido();
 
     const tarjetaElement = e.target.closest('.tarjeta');
 
-    if (tarjetaElement.getAttribute('id') === '1') {
+    if(tarjetaElement.getAttribute('id') === '1') {
         desk.classList.add('desk')
         desk.classList.remove('hidden')
     } else {

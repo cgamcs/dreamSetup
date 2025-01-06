@@ -143,7 +143,8 @@ li { list-style: none; }
 
 /*-- Main --*/
 .main,
-.desk {
+.desk,
+.pc {
     width: 90%;
     max-width: 100rem;
     margin: 0 auto;
@@ -151,7 +152,8 @@ li { list-style: none; }
 
 @media (min-width: 1200px) {
     .main,
-    .desk {
+    .desk,
+    .pc {
         width: 70%;
         max-width: 100rem;
         margin: 0 auto;
@@ -162,6 +164,7 @@ li { list-style: none; }
     display: flex;
     gap: 3rem;
     width: 100%;
+    height: 100%;
     background-color: var(--contrast-color);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px 0px;
     cursor: pointer;
@@ -196,8 +199,7 @@ li { list-style: none; }
 
 .hidden { display: none; }
 
-.desk,
-.pc {
+.desk{
     section { padding-bottom: 3rem; }
 
     section:last-child { padding-bottom: 10rem; }
@@ -226,6 +228,71 @@ ul.list {
     .link-list { 
         color: var(--link-color);
         cursor: pointer;
+    }
+}
+
+.pc {
+    section { padding-bottom: 3rem; }
+
+    section:last-child { padding-bottom: 10rem; }
+
+    .list { 
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        padding: 0;
+
+        .list-content { padding-bottom: 3rem; }
+
+        .list-content:last-child { padding-bottom: 0; }
+        
+        .link-list { 
+            color: var(--link-color);
+            cursor: pointer;
+        }
+    }
+
+    ul.list { 
+        padding: 0;
+    
+        .list-content { padding: 0; height: 100%; }
+        
+        .link-list { 
+            color: var(--link-color);
+            cursor: pointer;
+        }
+    }
+
+    .tarjeta {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 1rem 3rem 1rem;
+        gap: 1rem;
+        text-align: center;
+
+        h2 { font-size: 2rem;}
+    }
+
+    .tarjeta-img {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: unset;
+            height: revert-layer;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .pc .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .pc .list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

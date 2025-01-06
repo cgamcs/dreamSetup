@@ -336,5 +336,66 @@ const configuraciones = [
                 jpg: '/src/img/pc/Pylon 650W.png',
             }
         ]
+    },
+    {
+        titulo: 'RYZEN 5 8600G / RX 6600',
+        componentes: [
+            {
+                nombre: 'Ryzen 5 8600G',
+                link: 'https://acortar.link/RIViwl',
+                avif: '/src/img/pc/RYZEN 5 8600G.avif',
+                webp: '/src/img/pc/RYZEN 5 8600G.webp',
+                jpg: '/src/img/pc/RYZEN 5 8600G.png',
+            },
+            {
+                nombre: 'Disipador CPU Cooler Master Hyper 212 Black',
+                link: 'https://acortar.link/M9ZCxK',
+                avif: '/src/img/pc/cooler.avif',
+                webp: '/src/img/pc/cooler.webp',
+                jpg: '/src/img/pc/cooler.png',
+            },
+            {
+                nombre: 'ASROCK B650M',
+                link: 'https://acortar.link/QGksMM',
+                avif: '/src/img/pc/ASROCK B650M.avif',
+                webp: '/src/img/pc/ASROCK B650M.webp',
+                jpg: '/src/img/pc/ASROCK B650M.png',
+            },
+            {
+                nombre: 'RAM Kingston Fury Beast',
+                link: 'https://acortar.link/8LuUoq',
+                avif: '/src/img/pc/RAM Kingston Fury Beast.avif',
+                webp: '/src/img/pc/RAM Kingston Fury Beast.webp',
+                jpg: '/src/img/pc/RAM Kingston Fury Beast.png',
+            },
+            {
+                nombre: 'Kingston KC3000',
+                link: 'https://acortar.link/aG2M16',
+                avif: '/src/img/pc/Kingston KC3000.avif',
+                webp: '/src/img/pc/Kingston KC3000.webp',
+                jpg: '/src/img/pc/Kingston KC3000.png',
+            },
+            {
+                nombre: 'Radeon RX 6600 8GB GDDR6',
+                link: 'https://acortar.link/ET37IA',
+                avif: '/src/img/pc/RX 6600.avif',
+                webp: '/src/img/pc/RX 6600.webp',
+                jpg: '/src/img/pc/RX 6600.png',
+            },
+            {
+                nombre: 'NZXT H5 Elite',
+                link: 'https://acortar.link/MJIqCN',
+                avif: '/src/img/pc/NZXT H5 Elite.avif',
+                webp: '/src/img/pc/NZXT H5 Elite.webp',
+                jpg: '/src/img/pc/NZXT H5 Elite.png',
+            },
+            {
+                nombre: 'XPG Pylon 550W',
+                link: 'https://acortar.link/z0Dl2B',
+                avif: '/src/img/pc/Pylon 650W.avif',
+                webp: '/src/img/pc/Pylon 650W.webp',
+                jpg: '/src/img/pc/Pylon 650W.png',
+            }
+        ]
     }
 ]
